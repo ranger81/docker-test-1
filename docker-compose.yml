@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  shell:
+    image: alpine
+    tty: true
+    env_file:
+      - ./env/general.env
+      - stack.env # Required for Portainer deployment
+    restart: "unless-stopped"
+    healthcheck:
+      test: ["CMD", "test", "-f", "/proc/1/status"]
+      interval: 60s
+      timeout: 30s
+      retries: 3
+      start_period: 30s
