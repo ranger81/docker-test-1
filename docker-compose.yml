@@ -5,6 +5,4 @@ services:
     image: alpine
     tty: true
     env_file:
-      - ./env/general.env
-      - stack.env # Required for Portainer deployment
-    restart: "unless-stopped"
+      - stack.env
