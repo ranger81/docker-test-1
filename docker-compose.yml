@@ -6,4 +6,5 @@ services:
     tty: true
     env_file:
       - test.env
+      - test2.env
       - stack.env
