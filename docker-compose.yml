@@ -5,6 +5,5 @@ services:
     image: alpine
     tty: true
     env_file:
-      - stack.env
       - test.env
-      
+      - stack.env
